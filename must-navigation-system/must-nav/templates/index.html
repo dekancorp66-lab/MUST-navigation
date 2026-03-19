@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CITT Navigator — MUST</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@300;400;500&family=Rajdhani:wght@400;500;600;700&family=IBM+Plex+Sans:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/static/css/style.css" />
+</head>
+<body>
+  <!-- ── HEADER ────────────────────────────────────────── -->
+  <header class="site-header">
+    <div class="header-brand">
+      <div class="header-logo">
+        <svg viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg" width="36" height="36">
+          <rect x="2" y="2" width="32" height="32" rx="4" stroke="var(--accent)" stroke-width="1.5" fill="none"/>
+          <rect x="7" y="8" width="10" height="8" rx="1" fill="var(--accent)" opacity="0.7"/>
+          <rect x="19" y="8" width="10" height="8" rx="1" fill="var(--accent)" opacity="0.4"/>
+          <rect x="7" y="20" width="10" height="8" rx="1" fill="var(--accent)" opacity="0.4"/>
+          <rect x="19" y="20" width="10" height="8" rx="1" fill="var(--accent)" opacity="0.7"/>
+          <line x1="2" y1="18" x2="34" y2="18" stroke="var(--accent)" stroke-width="1" opacity="0.5"/>
+          <line x1="17" y1="2" x2="17" y2="34" stroke="var(--accent)" stroke-width="1" opacity="0.5"/>
+        </svg>
+      </div>
+      <div class="header-text">
+        <span class="header-title">CITT Navigator</span>
+        <span class="header-sub">Centre for Innovation and Technology Transfer · MUST</span>
+      </div>
+    </div>
+    <div class="header-status">
+      <span class="status-dot"></span>
+      <span class="status-label mono">System Online</span>
+    </div>
+  </header>
+
+  <!-- ── MAIN LAYOUT ───────────────────────────────────── -->
+  <main class="app-layout">
+
+    <!-- ── SIDEBAR ───────────────────────────────────── -->
+    <aside class="sidebar">
+
+      <!-- Search -->
+      <div class="sidebar-section">
+        <label class="section-label mono">/ search rooms</label>
+        <div class="search-wrapper">
+          <svg class="search-icon" viewBox="0 0 20 20" fill="none" width="16" height="16">
+            <circle cx="8.5" cy="8.5" r="5.5" stroke="currentColor" stroke-width="1.5"/>
+            <line x1="13" y1="13" x2="18" y2="18" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+          </svg>
+          <input type="text" id="room-search" class="search-input" placeholder="lab, office, meeting…" autocomplete="off" />
+        </div>
+      </div>
+
+      <!-- Room List -->
+      <div class="sidebar-section rooms-section">
+        <label class="section-label mono">/ rooms</label>
+        <div class="floor-tabs">
+          <button class="floor-tab active" data-floor="ground">Ground</button>
+          <button class="floor-tab" data-floor="upper">Upper</button>
+        </div>
+        <div id="room-list" class="room-list"></div>
+      </div>
+
+      <!-- Navigate Panel -->
+      <div class="sidebar-section nav-panel">
+        <label class="section-label mono">/ navigate</label>
+        <div class="nav-selectors">
+          <div class="nav-field">
+            <span class="nav-field-label">FROM</span>
+            <div class="nav-select-wrapper" id="from-wrapper">
+              <select id="from-select" class="nav-select">
+                <option value="">— Select start —</option>
+              </select>
+            </div>
+          </div>
+          <button class="swap-btn" id="swap-btn" title="Swap rooms">
+            <svg viewBox="0 0 20 20" fill="none" width="18" height="18">
+              <path d="M4 7h12M4 7l3-3M4 7l3 3M16 13H4M16 13l-3-3M16 13l-3 3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </button>
+          <div class="nav-field">
+            <span class="nav-field-label">TO</span>
+            <div class="nav-select-wrapper" id="to-wrapper">
+              <select id="to-select" class="nav-select">
+                <option value="">— Select destination —</option>
+              </select>
+            </div>
+          </div>
+        </div>
+        <button class="find-path-btn" id="find-path-btn">
+          <svg viewBox="0 0 20 20" fill="none" width="16" height="16" style="margin-right:8px">
+            <circle cx="4" cy="4" r="2.5" stroke="currentColor" stroke-width="1.5"/>
+            <circle cx="16" cy="16" r="2.5" stroke="currentColor" stroke-width="1.5"/>
+            <path d="M4 6.5 C4 10, 8 10, 10 10 S16 10 16 13.5" stroke="currentColor" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+          </svg>
+          Find Path
+        </button>
+        <button class="clear-btn" id="clear-btn">Clear</button>
+      </div>
+
+      <!-- Results Panel -->
+      <div class="sidebar-section results-section" id="results-section" style="display:none">
+        <label class="section-label mono">/ path result</label>
+        <div id="path-result" class="path-result"></div>
+      </div>
+
+    </aside>
+
+    <!-- ── MAP AREA ───────────────────────────────────── -->
+    <section class="map-area">
+
+      <div class="map-toolbar">
+        <div class="floor-switcher">
+          <button class="floor-switch-btn active" id="btn-floor-ground" data-floor="ground">
+            <span class="floor-num">G</span>
+            <span class="floor-name">Ground Floor</span>
+          </button>
+          <button class="floor-switch-btn" id="btn-floor-upper" data-floor="upper">
+            <span class="floor-num">1</span>
+            <span class="floor-name">Upper Floor</span>
+          </button>
+        </div>
+
+        <div class="map-controls">
+          <button class="ctrl-btn" id="zoom-in" title="Zoom In">+</button>
+          <button class="ctrl-btn" id="zoom-out" title="Zoom Out">−</button>
+          <button class="ctrl-btn" id="zoom-reset" title="Reset View">⊙</button>
+        </div>
+      </div>
+
+      <div class="map-viewport" id="map-viewport">
+        <div class="map-container" id="map-container">
+          <svg id="building-svg" xmlns="http://www.w3.org/2000/svg"></svg>
+        </div>
+      </div>
+
+      <!-- Room Info Tooltip -->
+      <div class="room-tooltip" id="room-tooltip" style="display:none">
+        <div class="tooltip-header">
+          <span class="tooltip-type-badge" id="tooltip-type"></span>
+          <button class="tooltip-close" id="tooltip-close">×</button>
+        </div>
+        <div class="tooltip-name" id="tooltip-name"></div>
+        <div class="tooltip-desc" id="tooltip-desc"></div>
+        <div class="tooltip-features" id="tooltip-features"></div>
+        <div class="tooltip-actions">
+          <button class="tooltip-btn set-from" id="tooltip-set-from">Set as Start</button>
+          <button class="tooltip-btn set-to" id="tooltip-set-to">Set as Destination</button>
+        </div>
+      </div>
+
+      <!-- Legend -->
+      <div class="map-legend">
+        <div class="legend-item"><span class="legend-dot office"></span>Office</div>
+        <div class="legend-item"><span class="legend-dot lab"></span>Lab / Workshop</div>
+        <div class="legend-item"><span class="legend-dot meeting_room"></span>Meeting</div>
+        <div class="legend-item"><span class="legend-dot incubation"></span>Incubation</div>
+        <div class="legend-item"><span class="legend-dot conference"></span>Seminar</div>
+        <div class="legend-item"><span class="legend-dot foyer"></span>Reception</div>
+      </div>
+
+    </section>
+
+  </main>
+
+  <!-- ── LOADING OVERLAY ───────────────────────────────── -->
+  <div class="loading-overlay" id="loading-overlay">
+    <div class="loading-spinner"></div>
+    <div class="loading-text mono">Loading building data…</div>
+  </div>
+
+  <script src="/static/js/navigation.js"></script>
+</body>
+</html>

@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- CITT Building — Ground Floor Map (Static Export)
+     Mbeya University of Science and Technology
+     Generated as reference/print asset.
+     Interactive version is rendered dynamically by navigation.js -->
+<svg viewBox="0 0 860 560" xmlns="http://www.w3.org/2000/svg"
+     width="860" height="560" style="background:#070d19">
+
+  <defs>
+    <pattern id="grid" width="20" height="20" patternUnits="userSpaceOnUse">
+      <path d="M 20 0 L 0 0 0 20" fill="none" stroke="rgba(0,140,200,0.08)" stroke-width="0.5"/>
+    </pattern>
+    <style>
+      text { font-family: 'IBM Plex Sans', Arial, sans-serif; }
+      .mono { font-family: 'IBM Plex Mono', monospace; }
+      .room-label { font-size: 11px; fill: #c8dde8; }
+      .room-id    { font-size: 7px;  fill: #4a90bf; font-family: monospace; }
+    </style>
+  </defs>
+
+  <!-- Background -->
+  <rect width="860" height="560" fill="#070d19"/>
+  <rect width="860" height="560" fill="url(#grid)"/>
+
+  <!-- Building outer walls -->
+  <rect x="18" y="18" width="824" height="524" fill="rgba(10,20,40,0.95)"
+        stroke="rgba(0,160,220,0.5)" stroke-width="1.5" rx="2"/>
+
+  <!-- Horizontal Corridor -->
+  <rect x="18" y="210" width="824" height="60"
+        fill="rgba(0,30,60,0.8)" stroke="rgba(0,140,200,0.1)" stroke-width="0.5"/>
+  <line x1="20" y1="240" x2="840" y2="240"
+        stroke="rgba(0,180,230,0.08)" stroke-width="1" stroke-dasharray="6 8"/>
+
+  <!-- Vertical Foyer/Entrance -->
+  <rect x="385" y="270" width="90" height="272"
+        fill="rgba(0,40,70,0.85)" stroke="rgba(0,140,200,0.1)" stroke-width="0.5"/>
+
+  <!-- ── GROUND FLOOR ROOMS ───────────────────────────── -->
+
+  <!-- G01 Administrative Office -->
+  <rect x="21" y="21" width="188" height="188"
+        fill="rgba(42,128,185,0.16)" stroke="#3a9fd4" stroke-width="1" rx="1"/>
+  <text class="room-id" x="36" y="31">G01</text>
+  <text class="room-label" x="115" y="110" text-anchor="middle">Administrative</text>
+  <text class="room-label" x="115" y="125" text-anchor="middle">Office</text>
+
+  <!-- G02 Director's Office -->
+  <rect x="211" y="21" width="173" height="188"
+        fill="rgba(42,128,185,0.16)" stroke="#3a9fd4" stroke-width="1" rx="1"/>
+  <text class="room-id" x="226" y="31">G02</text>
+  <text class="room-label" x="297" y="110" text-anchor="middle">Director's</text>
+  <text class="room-label" x="297" y="125" text-anchor="middle">Office</text>
+
+  <!-- G03 Seminar Hall -->
+  <rect x="476" y="21" width="173" height="188"
+        fill="rgba(26,82,118,0.22)" stroke="#2471a3" stroke-width="1" rx="1"/>
+  <text class="room-id" x="491" y="31">G03</text>
+  <text class="room-label" x="562" y="110" text-anchor="middle">Seminar Hall</text>
+  <!-- Projector icon hint -->
+  <rect x="536" y="150" width="52" height="14"
+        fill="none" stroke="rgba(36,113,163,0.3)" stroke-width="0.5" rx="2"/>
+  <text style="font-size:8px;fill:rgba(36,113,163,0.4)" x="562" y="160" text-anchor="middle">PROJECTOR</text>
+
+  <!-- G04 Staircase -->
+  <rect x="651" y="21" width="188" height="188"
+        fill="rgba(46,64,83,0.2)" stroke="#4a6278" stroke-width="1" rx="1"/>
+  <text class="room-id" x="666" y="31">G04</text>
+  <!-- Hatch lines -->
+  <line x1="651" y1="50"  x2="700" y2="21"  stroke="rgba(74,98,120,0.18)" stroke-width="1"/>
+  <line x1="651" y1="80"  x2="730" y2="21"  stroke="rgba(74,98,120,0.18)" stroke-width="1"/>
+  <line x1="651" y1="110" x2="760" y2="21"  stroke="rgba(74,98,120,0.18)" stroke-width="1"/>
+  <line x1="651" y1="140" x2="790" y2="21"  stroke="rgba(74,98,120,0.18)" stroke-width="1"/>
+  <line x1="651" y1="170" x2="820" y2="21"  stroke="rgba(74,98,120,0.18)" stroke-width="1"/>
+  <line x1="660" y1="209" x2="839" y2="54"  stroke="rgba(74,98,120,0.18)" stroke-width="1"/>
+  <line x1="700" y1="209" x2="839" y2="97"  stroke="rgba(74,98,120,0.18)" stroke-width="1"/>
+  <line x1="740" y1="209" x2="839" y2="140" stroke="rgba(74,98,120,0.18)" stroke-width="1"/>
+  <text class="room-label" x="745" y="115" text-anchor="middle">Staircase</text>
+  <text style="font-size:16px;fill:rgba(74,98,120,0.5)" x="745" y="140" text-anchor="middle">↕</text>
+
+  <!-- G05 Documentation & Resources -->
+  <rect x="21" y="271" width="188" height="268"
+        fill="rgba(42,128,185,0.12)" stroke="#3a9fd4" stroke-width="1" rx="1"/>
+  <text class="room-id" x="36" y="281">G05</text>
+  <text class="room-label" x="115" y="395" text-anchor="middle">Documentation</text>
+  <text class="room-label" x="115" y="410" text-anchor="middle">&amp; Resources</text>
+
+  <!-- G06 Meeting Room 1 -->
+  <rect x="211" y="271" width="173" height="268"
+        fill="rgba(26,102,149,0.18)" stroke="#2980b9" stroke-width="1" rx="1"/>
+  <text class="room-id" x="226" y="281">G06</text>
+  <text class="room-label" x="297" y="395" text-anchor="middle">Meeting</text>
+  <text class="room-label" x="297" y="410" text-anchor="middle">Room 1</text>
+  <!-- Table symbol -->
+  <rect x="265" y="450" width="64" height="30" fill="none" stroke="rgba(41,128,185,0.25)" stroke-width="0.5" rx="1"/>
+
+  <!-- G07 Meeting Room 2 -->
+  <rect x="476" y="271" width="173" height="268"
+        fill="rgba(26,102,149,0.18)" stroke="#2980b9" stroke-width="1" rx="1"/>
+  <text class="room-id" x="491" y="281">G07</text>
+  <text class="room-label" x="562" y="395" text-anchor="middle">Meeting</text>
+  <text class="room-label" x="562" y="410" text-anchor="middle">Room 2</text>
+  <rect x="530" y="450" width="64" height="30" fill="none" stroke="rgba(41,128,185,0.25)" stroke-width="0.5" rx="1"/>
+
+  <!-- G08 Restrooms -->
+  <rect x="651" y="271" width="188" height="268"
+        fill="rgba(33,47,61,0.2)" stroke="#34495e" stroke-width="1" rx="1"/>
+  <text class="room-id" x="666" y="281">G08</text>
+  <text class="room-label" x="745" y="400" text-anchor="middle">Restrooms</text>
+
+  <!-- Foyer label -->
+  <text style="font-size:9px;fill:rgba(26,143,111,0.6);writing-mode:vertical-lr;text-orientation:mixed"
+        x="424" y="490" text-anchor="middle">RECEPTION</text>
+
+  <!-- Entrance door indicator -->
+  <rect x="395" y="535" width="70" height="5"
+        fill="rgba(0,201,167,0.4)" rx="1"/>
+  <text style="font-size:8px;fill:rgba(0,201,167,0.5)"
+        x="430" y="553" text-anchor="middle">MAIN ENTRANCE ▼</text>
+
+  <!-- Navigation path nodes (informational) -->
+  <circle cx="110" cy="240" r="3" fill="rgba(0,201,167,0.3)"/>
+  <circle cx="297" cy="240" r="3" fill="rgba(0,201,167,0.3)"/>
+  <circle cx="430" cy="240" r="3" fill="rgba(0,201,167,0.3)"/>
+  <circle cx="563" cy="240" r="3" fill="rgba(0,201,167,0.3)"/>
+  <circle cx="745" cy="240" r="3" fill="rgba(0,201,167,0.3)"/>
+  <circle cx="430" cy="390" r="3" fill="rgba(0,201,167,0.3)"/>
+  <circle cx="430" cy="510" r="3" fill="rgba(0,201,167,0.4)"/>
+
+  <!-- Compass -->
+  <circle cx="825" cy="40" r="14" fill="none" stroke="rgba(0,160,220,0.12)" stroke-width="0.8"/>
+  <path d="M825,27 L821,52 L825,44 L829,52 Z" fill="rgba(0,180,150,0.5)"/>
+  <text style="font-size:7px;fill:rgba(0,180,150,0.5)" x="825" y="22" text-anchor="middle">N</text>
+
+  <!-- Footer label -->
+  <text class="mono" style="font-size:9px;fill:rgba(0,160,220,0.25);letter-spacing:2"
+        x="836" y="548" text-anchor="end">MUST · CITT · GROUND FLOOR</text>
+</svg>

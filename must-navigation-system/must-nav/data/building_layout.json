@@ -1,0 +1,258 @@
+{
+  "building": {
+    "name": "CITT Building",
+    "full_name": "Centre for Innovation and Technology Transfer",
+    "university": "Mbeya University of Science and Technology",
+    "abbreviation": "MUST",
+    "location": "Mbeya, Tanzania",
+    "established": 2013,
+    "floors": 2,
+    "description": "The CITT building houses innovation labs, startup incubation spaces, offices, and collaborative workspaces supporting entrepreneurship and technology transfer at MUST."
+  },
+  "floors": {
+    "ground": {
+      "id": "ground",
+      "name": "Ground Floor",
+      "level": 0,
+      "svg_viewbox": "0 0 860 560",
+      "rooms": [
+        {
+          "id": "FOYER",
+          "name": "Reception & Entrance",
+          "type": "foyer",
+          "floor": "ground",
+          "description": "Main entrance hall with reception desk, visitor registration, and building directory.",
+          "x": 385, "y": 270, "w": 90, "h": 270,
+          "nav_node": "GN_ENTRY",
+          "features": ["Reception Desk", "Visitor Log", "Building Directory", "WiFi Access"],
+          "accessible": true
+        },
+        {
+          "id": "G01",
+          "name": "Administrative Office",
+          "type": "office",
+          "floor": "ground",
+          "description": "Main administrative office managing CITT operations, student inquiries, and event coordination.",
+          "x": 20, "y": 20, "w": 190, "h": 190,
+          "nav_node": "GN_HC_L",
+          "features": ["Front Desk", "Notice Board", "Printer", "WiFi"],
+          "accessible": true
+        },
+        {
+          "id": "G02",
+          "name": "Director's Office",
+          "type": "office",
+          "floor": "ground",
+          "description": "Office of the CITT Director. Handles strategic partnerships and university liaison activities.",
+          "x": 210, "y": 20, "w": 175, "h": 190,
+          "nav_node": "GN_HC_ML",
+          "features": ["Private Meeting Area", "Bookshelf", "WiFi"],
+          "accessible": true
+        },
+        {
+          "id": "G03",
+          "name": "Seminar Hall",
+          "type": "conference",
+          "floor": "ground",
+          "description": "Multi-purpose seminar hall for workshops, public lectures, investor presentations, and events.",
+          "x": 475, "y": 20, "w": 175, "h": 190,
+          "nav_node": "GN_HC_MR",
+          "features": ["Projector", "Whiteboard", "Seats 40", "A/C", "WiFi"],
+          "accessible": true
+        },
+        {
+          "id": "G04",
+          "name": "Staircase",
+          "type": "staircase",
+          "floor": "ground",
+          "description": "Main staircase providing access to the Upper Floor.",
+          "x": 650, "y": 20, "w": 190, "h": 190,
+          "nav_node": "GN_STAIR",
+          "features": ["Handrail", "Emergency Exit"],
+          "accessible": false
+        },
+        {
+          "id": "G05",
+          "name": "Documentation & Resources",
+          "type": "office",
+          "floor": "ground",
+          "description": "Resource centre with intellectual property documentation, CITT publications, and research materials.",
+          "x": 20, "y": 270, "w": 190, "h": 270,
+          "nav_node": "GN_HC_L",
+          "features": ["Filing Systems", "IP Records", "Resource Library", "Scanner"],
+          "accessible": true
+        },
+        {
+          "id": "G06",
+          "name": "Meeting Room 1",
+          "type": "meeting_room",
+          "floor": "ground",
+          "description": "Small meeting room for team discussions, client meetings, and mentorship sessions.",
+          "x": 210, "y": 270, "w": 175, "h": 270,
+          "nav_node": "GN_HC_ML",
+          "features": ["Conference Table", "Whiteboard", "TV Screen", "WiFi"],
+          "accessible": true
+        },
+        {
+          "id": "G07",
+          "name": "Meeting Room 2",
+          "type": "meeting_room",
+          "floor": "ground",
+          "description": "Second meeting room for parallel sessions, interviews, and small group work.",
+          "x": 475, "y": 270, "w": 175, "h": 270,
+          "nav_node": "GN_HC_MR",
+          "features": ["Conference Table", "Whiteboard", "Projector", "WiFi"],
+          "accessible": true
+        },
+        {
+          "id": "G08",
+          "name": "Restrooms",
+          "type": "toilet",
+          "floor": "ground",
+          "description": "Accessible restrooms for male and female visitors and staff.",
+          "x": 650, "y": 270, "w": 190, "h": 270,
+          "nav_node": "GN_HC_R",
+          "features": ["Male & Female", "Accessible Stall"],
+          "accessible": true
+        }
+      ]
+    },
+    "upper": {
+      "id": "upper",
+      "name": "Upper Floor",
+      "level": 1,
+      "svg_viewbox": "0 0 860 560",
+      "rooms": [
+        {
+          "id": "U01",
+          "name": "Innovation Lab",
+          "type": "lab",
+          "floor": "upper",
+          "description": "Open-plan innovation workspace equipped with electronics stations, 3D printers, soldering tools, and rapid prototyping equipment.",
+          "x": 20, "y": 20, "w": 460, "h": 250,
+          "nav_node": "UN_HC_C",
+          "features": ["3D Printer", "Electronics Workstations", "Soldering Stations", "Oscilloscopes", "Components Library", "WiFi"],
+          "accessible": true
+        },
+        {
+          "id": "U02",
+          "name": "Incubation Hub A",
+          "type": "incubation",
+          "floor": "upper",
+          "description": "Dedicated startup incubation space for early-stage ventures. Provides desk space, mentorship access, and business development support.",
+          "x": 480, "y": 20, "w": 170, "h": 250,
+          "nav_node": "UN_HC_MR",
+          "features": ["Hot Desks", "Private Pods", "Mentorship Board", "Business Resources"],
+          "accessible": true
+        },
+        {
+          "id": "U03",
+          "name": "Staircase",
+          "type": "staircase",
+          "floor": "upper",
+          "description": "Staircase connecting Upper Floor to the Ground Floor.",
+          "x": 650, "y": 20, "w": 190, "h": 250,
+          "nav_node": "UN_STAIR",
+          "features": ["Handrail"],
+          "accessible": false
+        },
+        {
+          "id": "U04",
+          "name": "Prototype Workshop",
+          "type": "lab",
+          "floor": "upper",
+          "description": "Hands-on workshop space for building physical prototypes. Equipped with hand tools, basic electronics, and fabrication materials.",
+          "x": 20, "y": 330, "w": 250, "h": 210,
+          "nav_node": "UN_HC_L",
+          "features": ["Workbenches", "Hand Tools", "Safety Equipment", "Storage Cabinets"],
+          "accessible": true
+        },
+        {
+          "id": "U05",
+          "name": "Collaboration Studio",
+          "type": "meeting_room",
+          "floor": "upper",
+          "description": "Open collaboration area for cross-team projects, hackathons, design sprints, and creative brainstorming sessions.",
+          "x": 270, "y": 330, "w": 230, "h": 210,
+          "nav_node": "UN_HC_C",
+          "features": ["Movable Furniture", "Wall Whiteboards", "Projector", "WiFi", "Breakout Pods"],
+          "accessible": true
+        },
+        {
+          "id": "U06",
+          "name": "Incubation Hub B",
+          "type": "incubation",
+          "floor": "upper",
+          "description": "Second incubation suite for growth-stage startups. Provides semi-private office pods and high-speed internet access.",
+          "x": 500, "y": 330, "w": 150, "h": 210,
+          "nav_node": "UN_HC_MR",
+          "features": ["Private Offices", "High-Speed Internet", "Phone Booths", "Storage"],
+          "accessible": true
+        },
+        {
+          "id": "U07",
+          "name": "Server & IT Infrastructure",
+          "type": "server",
+          "floor": "upper",
+          "description": "Central IT infrastructure room housing servers, network equipment, and campus internet distribution systems.",
+          "x": 650, "y": 330, "w": 190, "h": 210,
+          "nav_node": "UN_HC_R",
+          "features": ["Server Racks", "Network Switches", "UPS Systems", "Climate Control"],
+          "accessible": false
+        }
+      ]
+    }
+  },
+  "nav_graph": {
+    "nodes": {
+      "GN_ENTRY":  {"x": 430, "y": 510, "floor": "ground", "label": "Main Entrance"},
+      "GN_VC_MID": {"x": 430, "y": 390, "floor": "ground", "label": "Foyer Mid"},
+      "GN_HC_C":   {"x": 430, "y": 240, "floor": "ground", "label": "Central Corridor"},
+      "GN_HC_L":   {"x": 110, "y": 240, "floor": "ground", "label": "West Corridor"},
+      "GN_HC_ML":  {"x": 297, "y": 240, "floor": "ground", "label": "Centre-West Corridor"},
+      "GN_HC_MR":  {"x": 563, "y": 240, "floor": "ground", "label": "Centre-East Corridor"},
+      "GN_HC_R":   {"x": 745, "y": 240, "floor": "ground", "label": "East Corridor"},
+      "GN_STAIR":  {"x": 745, "y": 115, "floor": "ground", "label": "Ground Floor Staircase"},
+
+      "UN_STAIR":  {"x": 745, "y": 145, "floor": "upper",  "label": "Upper Floor Staircase"},
+      "UN_HC_R":   {"x": 745, "y": 300, "floor": "upper",  "label": "Upper East Corridor"},
+      "UN_HC_MR":  {"x": 565, "y": 300, "floor": "upper",  "label": "Upper Centre-East Corridor"},
+      "UN_HC_C":   {"x": 385, "y": 300, "floor": "upper",  "label": "Upper Central Corridor"},
+      "UN_HC_L":   {"x": 135, "y": 300, "floor": "upper",  "label": "Upper West Corridor"}
+    },
+    "edges": [
+      ["GN_ENTRY",  "GN_VC_MID"],
+      ["GN_VC_MID", "GN_HC_C"],
+      ["GN_HC_C",   "GN_HC_ML"],
+      ["GN_HC_ML",  "GN_HC_L"],
+      ["GN_HC_C",   "GN_HC_MR"],
+      ["GN_HC_MR",  "GN_HC_R"],
+      ["GN_HC_R",   "GN_STAIR"],
+
+      ["UN_STAIR",  "UN_HC_R"],
+      ["UN_HC_R",   "UN_HC_MR"],
+      ["UN_HC_MR",  "UN_HC_C"],
+      ["UN_HC_C",   "UN_HC_L"],
+
+      ["GN_STAIR",  "UN_STAIR", "floor_change"]
+    ],
+    "room_nodes": {
+      "FOYER": "GN_ENTRY",
+      "G01":   "GN_HC_L",
+      "G02":   "GN_HC_ML",
+      "G03":   "GN_HC_MR",
+      "G04":   "GN_STAIR",
+      "G05":   "GN_HC_L",
+      "G06":   "GN_HC_ML",
+      "G07":   "GN_HC_MR",
+      "G08":   "GN_HC_R",
+      "U01":   "UN_HC_C",
+      "U02":   "UN_HC_MR",
+      "U03":   "UN_STAIR",
+      "U04":   "UN_HC_L",
+      "U05":   "UN_HC_C",
+      "U06":   "UN_HC_MR",
+      "U07":   "UN_HC_R"
+    }
+  }
+}
